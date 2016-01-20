@@ -4,7 +4,8 @@
   "description": "A webapp to facilitate communication between two Minnesota non profits, DressUp MN and Upturnships.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,10 @@
   },
   "homepage": "https://github.com/aharasymiw/DressUpMn#readme",
   "dependencies": {
+    "auth0-lock": "^8.1.5",
     "body-parser": "^1.14.2",
+    "debug": "^2.2.0",
     "express": "^4.13.3",
-    "jsonwebtoken": "^5.5.4",
     "mongoose": "^4.3.6",
     "morgan": "^1.6.1"
   }

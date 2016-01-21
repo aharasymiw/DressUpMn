@@ -5,18 +5,18 @@ function($routeProvider, $locationProvider) {
   $routeProvider.
     when('/home', {
       templateUrl: '../views/routes/home.html',
-      controller: 'DefaultController'
+      controller: 'HomeController'
     }).when('/about', {
-      templateUrl: '.../views/routes/about.html',
+      templateUrl: '../views/routes/about.html',
       controller: 'AboutController'
+    }).when('/doStuff', {
+      templateUrl: '../views/routes/doStuff.html',
+      controller: 'DoStuffController'
     }).when('/error', {
       templateUrl: '../views/routes/error.html',
       controller: 'ErrorController'
-    }).when('/error', {
-      templateUrl: '../views/routes/doStuff.html',
-      controller: 'DoStuffController'
     }).otherwise({
-      redirectTo: 'home'
+      redirectTo: '/home'
     });
 
   $locationProvider.html5Mode(true);

@@ -1,4 +1,5 @@
-var app = angular.module('app', ['ngRoute', 'ngMaterial']);
+var app = angular.module('app', ['auth0', 'angular-storage', 'angular-jwt',
+'ngRoute', 'ngMaterial']);
 
 app.config(['$routeProvider', '$locationProvider',
 function($routeProvider, $locationProvider) {
@@ -12,13 +13,29 @@ function($routeProvider, $locationProvider) {
     }).when('/doStuff', {
       templateUrl: '../views/routes/doStuff.html',
       controller: 'DoStuffController'
+    }).when('/login', {
+      templateUrl: '../views/routes/login.html',
+      controller: 'LoginController'
     }).when('/error', {
       templateUrl: '../views/routes/error.html',
       controller: 'ErrorController'
     }).otherwise({
-      redirectTo: '/home'
+      redirectTo: '/login'
     });
 
   $locationProvider.html5Mode(true);
 
 }]);
+
+app.config(function(authProvider) {
+  authProvider.init({
+    domain: 'dressupmn.auth0.com',
+    clientID: '3PJOzGYro7Y69eXWwikD34gq7R0FClC3'
+  });
+})
+.run(function(auth) {
+  // This hooks al auth events to check everything as soon as the app starts
+  auth.hookEvents();
+});
+
+// "auth0-lock": "^8.1.5",

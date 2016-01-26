@@ -2,10 +2,12 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-
+var mongoose = require('mongoose');
 var routes = require('./server/routes/index');
 var clients = require('./server/routes/clients');
 var form = require('./server/routes/form');
+var adminCalendar = require('./server/routes/calendar');
+var moment = require('moment');
 var app = express();
 
 app.use(logger('dev'));
@@ -16,8 +18,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/clients', clients);
 //The form route is currently set up as a direct route. Needs to be refactored
 //Into an Angular route.
-app.use('/form', form);
+app.use('/api/form', form);
+app.use('/admin/calendar', adminCalendar);
 app.use('/', routes);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

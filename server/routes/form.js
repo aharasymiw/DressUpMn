@@ -9,7 +9,6 @@ var mongoose = require('mongoose');
 var Log = require('../models/clients');
 
 router.get('/', function(req, res, next) {
-    res.sendFile(path.join(__dirname, '../../public/views/routes/form.html'));
 });
 
 router.post('/', function(req, res, next) {

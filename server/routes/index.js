@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/*', function(req, res) {
-  console.log('Path is: ', path.join(__dirname, '../', file));
+ //'Path is: ', path.join(__dirname, '../', file);
   res.sendFile(path.join(__dirname, '../../public/views/index.html'));
 });
 

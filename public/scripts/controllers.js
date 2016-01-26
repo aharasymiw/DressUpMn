@@ -14,6 +14,11 @@
 
   }]);
 
+  app.controller('FormController', ['$scope', '$http',
+  function($scope, $http) {
+
+  }]);
+
   app.controller('ErrorController', ['$scope', '$http',
   function($scope, $http) {
 

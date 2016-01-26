@@ -5,9 +5,9 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var routes = require('./server/routes/index');
 var clients = require('./server/routes/clients');
+var form = require('./server/routes/form');
 var adminCalendar = require('./server/routes/calendar');
 var moment = require('moment');
-
 var app = express();
 
 app.use(logger('dev'));
@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/clients', clients);
+app.use('/api/form', form);
 app.use('/admin/calendar', adminCalendar);
 app.use('/', routes);
 

@@ -43,24 +43,26 @@
             view-title="calendarTitle"
             cell-is-open="isCellOpen"
             on-event-click="eventClicked(calendarEvent);"
+            on-timespan-click="timespanClicked(calendarDate)"
     >
     </mwl-calendar>
 
     <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add a Timeslot</button>
 
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> 
+        <div class="modal-dialog" role="document"> 
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">Add a Timeslot</h4>
                 </div>
                 <div class="modal-body">
-                    <form ng-submit="submit()" >
-                        <label for="startsAt">Starts At:</label>
-                        <input type="datetime-local" ng-model="form.startsAt" id="startsAt">
-                        <label for="endsAt">Ends At:</label>
-                        <input type="datetime-local" ng-model="form.endsAt" id="endsAt">
+                    <form ng-submit="submit()">
+                        <input type="text" class="form-control"
+                               uib-datepicker-popup="mediumDate"
+                               is-open="valuationDatePickerIsOpen"
+                               ng-click="valuationDatePickerOpen()"
+                               ng-model="valuationDate" />
                         <button class="btn btn-default" type="submit">Submit</button>
                     </form>
                 </div>
@@ -71,5 +73,4 @@
             </div>
         </div>
     </div>
-
-   </div>
+</div>

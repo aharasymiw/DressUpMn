@@ -3,23 +3,36 @@ var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var jwt = require('express-jwt');
 var routes = require('./server/routes/index');
 var clients = require('./server/routes/clients');
 var form = require('./server/routes/form');
 var adminCalendar = require('./server/routes/calendar');
 var moment = require('moment');
+var dotenv = require('dotenv');
+
 var app = express();
+
+dotenv.load();
+
+var jwtCheck = jwt({
+  secret: new Buffer(process.env.AUTH0_CLIENT_SECRET, 'base64'),
+  audience: process.env.AUTH0_CLIENT_ID
+});
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//How to protect server-side routes
+//app.use('/api/path-you-want-to-protect', jwtCheck);
+app.use('/api', jwtCheck);
+
 app.use('/clients', clients);
 app.use('/api/form', form);
 app.use('/admin/calendar', adminCalendar);
 app.use('/', routes);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -2,9 +2,11 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-
+var mongoose = require('mongoose');
 var routes = require('./server/routes/index');
 var clients = require('./server/routes/clients');
+var adminCalendar = require('./server/routes/calendar');
+var moment = require('moment');
 
 var app = express();
 
@@ -14,7 +16,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/clients', clients);
+app.use('/admin/calendar', adminCalendar);
 app.use('/', routes);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

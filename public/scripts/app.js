@@ -22,3 +22,10 @@ function($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 
 }]);
+
+app.controller('sendData', ['$scope', '$http',
+  function($scope, $http) {
+
+
+
+  }]);

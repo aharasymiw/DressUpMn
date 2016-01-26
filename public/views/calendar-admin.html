@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calendar-admin">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--StyleSheets-->
+    <link rel="stylesheet" href="../vendors/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendors/Bootstrap-Calendar/angular-bootstrap-calendar.min.css">
+
+    <!--Scripts-->
+    <script src="../vendors/moment/moment.js"></script>
+    <script src="../vendors/Angular/angular.min.js"></script>
+    <script src="../vendors/Bootstrap-UI/ui-bootstrap-tpls.js"></script>
+    <script src="../vendors/Bootstrap-Calendar/angular-bootstrap-calendar-tpls.min.js"></script>
+    <script src="../scripts/calendar-admin.js"></script>
+
+
+
+
+
+</head>
+<body>
+    <div ng-controller="adminCal">
+
+        <h2 class="text-center">{{ calendarTitle }}</h2>
+
+        <div class="row">
+
+            <div class="col-md-6 text-center">
+                <div class="btn-group">
+
+                    <button
+                            class="btn btn-primary"
+                            mwl-date-modifier
+                            date="viewDate"
+                            decrement="view">
+                        Previous
+                    </button>
+                    <button
+                            class="btn btn-default"
+                            mwl-date-modifier
+                            date="viewDate"
+                            set-to-today>
+                        Today
+                    </button>
+                    <button
+                            class="btn btn-primary"
+                            mwl-date-modifier
+                            date="viewDate"
+                            increment="view">
+                        Next
+                    </button>
+                </div>
+            </div>
+
+            <br class="visible-xs visible-sm">
+
+        </div>
+
+
+        <mwl-calendar
+                view="view"
+                view-date="viewDate"
+                events="events"
+                view-title="calendarTitle"
+                >
+        </mwl-calendar>
+
+
+
+    </div>
+</body>
+</html>

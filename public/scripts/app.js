@@ -1,18 +1,38 @@
 var app = angular.module('app', ['auth0', 'angular-storage', 'angular-jwt',
 'ngRoute', 'ngMaterial']);
 
-app.config(['$routeProvider', '$locationProvider',
-function($routeProvider, $locationProvider) {
+app.run(function($rootScope, auth, store, jwtHelper, $location) {
+  // This events gets triggered on refresh or URL change
+  $rootScope.$on('$locationChangeStart', function() {
+    var token = store.get('token');
+    if (token) {
+      if (!jwtHelper.isTokenExpired(token)) {
+        if (!auth.isAuthenticated) {
+          auth.authenticate(store.get('profile'), token);
+        }
+      } else {
+        // Either show the login page or use the refresh token to get a new idToken
+        $location.path('/');
+      }
+    }
+  });
+});
+
+app.config(['authProvider', '$routeProvider', '$locationProvider',
+function(authProvider, $routeProvider, $locationProvider) {
   $routeProvider.
     when('/home', {
       templateUrl: '../views/routes/home.html',
-      controller: 'HomeController'
+      controller: 'HomeController',
+      requiresLogin: true
     }).when('/about', {
       templateUrl: '../views/routes/about.html',
-      controller: 'AboutController'
+      controller: 'AboutController',
+      requiresLogin: true
     }).when('/doStuff', {
       templateUrl: '../views/routes/doStuff.html',
-      controller: 'DoStuffController'
+      controller: 'DoStuffController',
+      requiresLogin: true
     }).when('/login', {
       templateUrl: '../views/routes/login.html',
       controller: 'LoginController'
@@ -22,6 +42,14 @@ function($routeProvider, $locationProvider) {
     }).otherwise({
       redirectTo: '/login'
     });
+
+  authProvider.init({
+    domain: 'dressupmn.auth0.com',
+    clientID: '3PJOzGYro7Y69eXWwikD34gq7R0FClC3',
+    callbackURL: location.href,
+    // Here include the URL to redirect to if the user tries to access a resource when not authenticated.
+    loginUrl: '/login'
+  });
 
   $locationProvider.html5Mode(true);
 

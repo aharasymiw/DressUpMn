@@ -7,15 +7,18 @@
     <meta charset="UTF-8">
     <title>DressUpMN!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
     <base href="/">
   </head>
 
   <body>
-    <header ng-include="'/views/templates/header.html'"></header>
-    <nav ng-include="'/views/templates/nav.html'"></nav>
+  <img class="city-img" src="/img/city.jpg" alt="">
+  <img class="logo" src="/img/biglogo.png" alt="">
+    <!--<header ng-include="'/views/templates/header.html'"></header>-->
+    <!--<nav ng-include="'/views/templates/nav.html'"></nav>-->
     <main ng-view></main>
-    <footer ng-include="'/views/templates/footer.html'"></footer>
+    <!--<footer ng-include="'/views/templates/footer.html'"></footer>-->
 
     <!-- Scripts -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>

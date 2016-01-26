@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/clients', clients);
+//The form route is currently set up as a direct route. Needs to be refactored
+//Into an Angular route.
 app.use('/form', form);
 app.use('/', routes);
 

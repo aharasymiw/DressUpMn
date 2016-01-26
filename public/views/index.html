@@ -13,22 +13,26 @@
   </head>
 
   <body>
-    <header ng-include="'/views/templates/header.html'"></header>
-    <nav ng-include="'/views/templates/nav.html'"></nav>
+
+    <img class="city-img" src="/img/city.jpg" alt="">
+    <div class="logo">
+      <img  src="/img/biglogo.png" alt="">
+    </div>
+    {{login()}}
     <main ng-view></main>
-    <footer ng-include="'/views/templates/footer.html'"></footer>
+
 
     <!-- Scripts -->
     <script type="text/javascript" src="vendors/Angular/angular.min.js"></script>
     <script type="text/javascript" src="vendors/Angular/Route/angular-route.min.js"></script>
 
     <!-- Auth0 Lock script and AngularJS module -->
-    <script src="//cdn.auth0.com/js/lock-8.1.min.js"></script>
+    <script src="vendors/Authentication/lock-8.1.min.js"></script>
     <!-- angular-jwt and angular-storage -->
-    <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
-    <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+    <script type="text/javascript" src="vendors/Authentication/angular-storage.js"></script>
+    <script type="text/javascript" src="vendors/Authentication/angular-jwt.js"></script>
 
-    <script src="//cdn.auth0.com/w2/auth0-angular-4.js"> </script>
+    <script src="vendors/Authentication/auth0-angular-4.js"> </script>
 
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/controllers.js"></script>

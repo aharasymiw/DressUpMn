@@ -27,7 +27,7 @@ $routeProvider, $locationProvider, $httpProvider, jwtInterceptorProvider) {
       pageTitle: 'Client Form',
       requiresLogin: true
     }).when('/login', {
-      templateUrl: '../views/routes/login.html',
+      templateUrl: '../views/login.html',
       controller: 'LoginController'
     }).when('/error', {
       templateUrl: '../views/routes/error.html',

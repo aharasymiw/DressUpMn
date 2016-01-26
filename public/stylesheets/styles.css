@@ -16,8 +16,16 @@ a {
 }
 
 .logo {
-  float: right;
+  background-color: grey;
   position: absolute;
+  margin: 0 auto;
+  width: 37%;
+  width: 100%;
+}
+.logo img {
+
   width: 445px;
+
+
 
 }

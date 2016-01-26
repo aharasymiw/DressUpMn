@@ -12,6 +12,9 @@ function($routeProvider, $locationProvider) {
     }).when('/doStuff', {
       templateUrl: '../views/routes/doStuff.html',
       controller: 'DoStuffController'
+    }).when('/form', {
+      templateUrl: '../views/routes/form.html',
+      controller: 'FormController'
     }).when('/error', {
       templateUrl: '../views/routes/error.html',
       controller: 'ErrorController'
@@ -22,3 +25,8 @@ function($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 
 }]);
+
+app.controller('sendData', ['$scope', '$http',
+  function($scope, $http) {
+
+  }]);

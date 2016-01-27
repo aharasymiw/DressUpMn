@@ -6,37 +6,21 @@
     <meta charset="UTF-8">
     <title>DressUpMN!</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/Bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/vendors/fullcalendar/fullcalendar.css" />
     <link rel="stylesheet" href="/stylesheets/calendarstyle.css"/>
-
-    <link rel="stylesheet" type="text/css" href="vendors/Bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
-
     <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
-    <script src="/vendors/Angular/angular.js"></script>
-    <script src="/vendors/jQuery/jquery.min.js"></script>
+
     <base href="/">
   </head>
 
   <body>
-
-    <img class="city-img" src="/img/city.jpg" alt="">
-    <div class="logo">
-      <img  src="/img/biglogo.png" alt="">
-    </div>
-    {{login()}}
+    <nav ng-include="'/views/templates/header.html'"></nav>
     <main ng-view></main>
-
+    <nav ng-include="'/views/templates/footer.html'"></nav>
 
     <!-- Scripts -->
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-animate.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-aria.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
-
+    <script src="/vendors/jQuery/jquery.min.js"></script>
     <script type="text/javascript" src="vendors/Angular/angular.min.js"></script>
     <script type="text/javascript" src="vendors/Angular/Route/angular-route.min.js"></script>
 
@@ -47,7 +31,6 @@
     <script type="text/javascript" src="vendors/Authentication/angular-jwt.js"></script>
 
     <script src="vendors/Authentication/auth0-angular-4.js"> </script>
-
 
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/controllers.js"></script>

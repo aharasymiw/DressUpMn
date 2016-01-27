@@ -3,17 +3,8 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-aside::after {
-  content: "";
-  background: url(/img/city.jpg);
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-  max-width: 100%;
+.img-bkgrnd {
+  width: 100%;
 }
 
 a {

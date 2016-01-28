@@ -4,10 +4,36 @@ var Schema = mongoose.Schema;
 
 var clientSchema = new Schema(
   {
-    clientName: String,
-    clientAddress: String,
+    clientFirstName: String,
+    clientLastName: String,
+    clientStreetL1: String,
+    clientStreetL2: String,
     clientCity: String,
-    clientState: String
+    clientState: String,
+    clientZip: Number,
+    clientHomePh: Number,
+    clientCellPh: Number,
+    clientEmail: String,
+    altContactName: String,
+    altContactPh: Number,
+    altContactRel: String,
+    clientAge: Number,
+    clientHeight: String,
+    clientTopSize: String,
+    clientBottomSize: String,
+    clientShoeSize: String,
+    clientRestrictions: String,
+    interviewStartDate: Date,
+    employementStartDate: Date,
+    company: String,
+    jobTitle: String,
+    schedulingRestrictions: String
+
+
+
+
+
+
     /*    clientZip: ,
         clientAge: ,
         clientTopSize: ,

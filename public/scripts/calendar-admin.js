@@ -16,15 +16,16 @@ app.config(['$routeProvider', '$locationProvider',
 
 app.controller('adminCal', ['$scope','moment', 'calendarConfig', '$uibModal',
   function($scope, moment, calendarConfig, $uibModal) {
-
+    /* The status is used for the title paramater of the objects in the events array.
+    * Currently there is only one but if we add the admin view to add volunteers and clients
+    * in timeslots we would need add more status titles for events*/
     var status = {
       open: 'Open Time Slot'
     };
 
     $scope.view = 'month';
-    $scope.viewDate = new Date(2016, 1, 1, 0);
-    console.log($scope.events);
-
+    $scope.viewDate = new Date();
+    //Scope form for submitting events
     $scope.form = {
     };
 
@@ -84,6 +85,7 @@ app.controller('adminCal', ['$scope','moment', 'calendarConfig', '$uibModal',
       }
     };
 
+    //Datepicker logic
     //$scope.valuationDate = '';
     $scope.valuationDatePickerIsOpen = false;
 

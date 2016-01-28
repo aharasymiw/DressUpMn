@@ -27,33 +27,8 @@ clientStreetL1: string,
       employementStartDate: date,
       company: string,
       jobTitle: string,
-      schedulingRestrictions: string,
+      schedulingRestrictions: string
 
-
-
-
-
-
-    /*    clientZip: ,
-        clientAge: ,
-        clientTopSize: ,
-        clientBottomSize: ,
-        clientShoeSize: ,
-        clientPrimaryPhone: ,
-        clientSecondaryPhone: ,
-        clientEmail: ,
-        alternateName: ,
-        alternatePhone: ,
-        height: ,
-        interviewDate: ,
-        employmentDate: ,
-        hiringCompany: ,
-        client: ,
-        client: ,
-        client: ,
-        client: ,
-        client:
-*/
   }
 );
 

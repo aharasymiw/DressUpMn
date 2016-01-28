@@ -179,24 +179,24 @@
             </label>
             <br>
             <label>
-            <textarea rows="4" cols="50" name="clothing-restrictions"
+            <textarea ng-model="clientRestrictions" rows="4" cols="50" name="clothing-restrictions"
                       placeholder="e.g. Unable to wear high-heels, must wear hijab..."></textarea>
             </label>
         </div>
         <div class="employment-info">
             <h4>Employment/Interview Information</h4>
             <label>First Interview Date
-                <input type="date" name="interview-date">
+                <input ng-model="interviewStartDate" type="date" name="interview-date">
             </label>
             <p>OR</p>
             <label>Employment Start Date
-                <input type="date" name="employment-start">
+                <input ng-model="employementStartDate" type="date" name="employment-start">
             </label>
             <label>Company
-                <input type="text" name="company-name">
+                <input ng-model="company" type="text" name="company-name">
             </label>
             <label>Job Title
-                <input type="text" name="job-title">
+                <input ng-model="jobTitle" type="text" name="job-title">
             </label>
         </div>
 

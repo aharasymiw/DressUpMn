@@ -4,3 +4,4 @@ node_modules
 npm-debug.log
 .jscsrc
 .env
+.com.apple.timemachine.supported

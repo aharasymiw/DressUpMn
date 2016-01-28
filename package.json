@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www"
+    "start": "node ./www"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,6 @@
   },
   "homepage": "https://github.com/aharasymiw/DressUpMn#readme",
   "dependencies": {
-    "angular-bootstrap-calendar": "^0.18.3",
-    "angular-ui-bootstrap": "^1.1.1",
     "auth0-lock": "^8.1.5",
     "body-parser": "^1.14.2",
     "debug": "^2.2.0",

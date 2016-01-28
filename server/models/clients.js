@@ -16,7 +16,7 @@ var clientSchema = new Schema(
     clientEmail: String,
     altContactName: String,
     altContactPh: Number,
-    altContactRelationship: String,
+    altContactRel: String,
     clientAge: Number,
     clientHeight: String,
     clientTopSize: String,

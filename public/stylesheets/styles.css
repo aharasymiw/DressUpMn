@@ -30,8 +30,8 @@ a {
   width: 445px;
 }
 
-/*This is for the contact form that Brandi is styling*/
+/*!*This is for the contact form that Brandi is styling*!*/
 
-label {
+label.block-fields {
   display: block;
 }

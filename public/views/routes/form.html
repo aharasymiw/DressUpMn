@@ -4,28 +4,28 @@
 <div class="form">
     <h1>Client Referral Form</h1>
     <!--Do we still want the form worded in the perspective of a caseworker?-->
-    <label>Thank you for using Dress for Success Twin Cities. Please fill out the form below so we can help your client
+    <label class=block-fields>Thank you for using Dress for Success Twin Cities. Please fill out the form below so we can help your client
         get suited for their interview or job.</label>
     <form>
         <div class="client-info">
             <h4>Client Information</h4>
-            <label>First Name
+            <label class=block-fields>First Name
                 <input type="text" ng-model="clientFirstName" placeholder="First Name">
             </label>
-            <label>Last Name
+            <label class=block-fields>Last Name
                 <input type="text" ng-model="clientLastName" placeholder="Last Name">
             </label>
             <h4>Client Address</h4>
-            <label>Street line 1:
+            <label class=block-fields>Street line 1:
                 <input type="text" ng-model="clientStreetL1" placeholder="Street line 1">
             </label>
-            <label>Street line 2:
+            <label class=block-fields>Street line 2:
                 <input type="text" ng-model="clientStreetL2" placeholder="Street line 2">
             </label>
-            <label>City:
+            <label class=block-fields>City:
                 <input type="text" ng-model="clientCity" placeholder="City">
             </label>
-            <label>State:
+            <label class=block-fields>State:
                 <select ng-model="clientState">
                     <option value="MN">Minnesota</option>
                     <option value="AL">Alabama</option>
@@ -80,38 +80,37 @@
                     <option value="WY">Wyoming</option>
                 </select>
             </label>
-            <label>Zip:
+            <label class=block-fields>Zip:
                 <input ng-model="clientZip" type="text" placeholder="Zip">
             </label>
-            <label>Client Home Phone:
+            <label class=block-fields>Client Home Phone:
                 <input ng-model="clientHomePh" type="tel">
             </label>
-            <label>Cell Phone:
+            <label class=block-fields>Cell Phone:
                 <input ng-model="clientCellPh" type="tel" placeholder="Cell Phone">
             </label>
-            <label>Email:
+            <label class=block-fields>Email:
                 <input ng-model="clientEmail" type="email" placeholder="Email">
-            </label>
-            <p>Alternate Client Contact. How else can we reach you?</p>
-            <label>Contact Name
+            </label>Alternate Client Contact (How else can we reach your client)?
+            <label class=block-fields>Contact Name
                 <input ng-model="altContactName" type="text" placeholder="Contact Name">
             </label>
-            <label>Phone Number:
+            <label class=block-fields>Phone Number:
                 <input ng-model="altContactPh" type="tel">
             </label>
-            <label>Relation to Client
+            <label class=block-fields>Relation to Client
                 <input ng-model="altContactRel" type="text">
             </label>
         </div>
         <div class="suiting-info">
             <h4>Client Suiting Information</h4>
-            <label>Age:
+            <label class=block-fields>Age:
                 <input ng-model="clientAge" type="number">
             </label>
-            <label>Height:
+            <label class=block-fields>Height:
                 <input ng-model="clientHeight" type="text">
             </label>
-            <label>Select your top size:
+            <label class=block-fields>Select your top size:
                 <select ng-model="clientTopSize">
                     <option value="XS">XS</option>
                     <option value="S">S</option>
@@ -126,7 +125,7 @@
                     <option value="4X-up">4X and up</option>
                 </select>
             </label>
-            <label>Select your bottom size:
+            <label class=block-fields>Select your bottom size:
                 <select ng-model="clientBottomSize">
                     <option value="0">0</option>
                     <option value="2">2</option>
@@ -157,7 +156,7 @@
                 </select>
             </label>
             <p>Select your shoe size:</p>
-            <label>
+            <label class=block-fields>
                 <select ng-model="clientShoeSize">
                     <option value="5.5">5.5</option>
                     <option value="6">6</option>
@@ -178,29 +177,29 @@
                 </select>
             </label>
             <br>
-            <label>
+            <label class=block-fields>Does your client have any other clothing restrictions?
             <textarea rows="4" cols="50" name="clothing-restrictions"
                       placeholder="e.g. Unable to wear high-heels, must wear hijab..."></textarea>
             </label>
         </div>
         <div class="employment-info">
             <h4>Employment/Interview Information</h4>
-            <label>First Interview Date
+            <label class=block-fields>First Interview Date
                 <input type="date" name="interview-date">
             </label>
             <p>OR</p>
-            <label>Employment Start Date
+            <label class=block-fields>Employment Start Date
                 <input type="date" name="employment-start">
             </label>
-            <label>Company
+            <label class=block-fields>Company
                 <input type="text" name="company-name">
             </label>
-            <label>Job Title
+            <label class=block-fields>Job Title
                 <input type="text" name="job-title">
             </label>
         </div>
 
-        <label>Does your client have any scheduling restrictions?
+        <label class=block-fields>Does your client have any scheduling restrictions?
             <textarea rows="4" cols="50" name="schedule-restrictions"></textarea>
         </label>
         <br>

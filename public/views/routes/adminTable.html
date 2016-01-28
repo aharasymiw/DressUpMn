@@ -1,0 +1,36 @@
+<div class="table" ng-controller="tableController">
+    <div class="table-container">
+        <table st-table="data" st-safe-src="rowCollection" class="admin-table">
+            <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr class="search-filter">
+                <th class="search-filter" colspan="3">
+                    <input st-search placeholder="global search" class="input-sm form-control" type="search"/>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="client in data">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+            </thead>
+            <tr class="foottr">
+                <td colspan="5" class="text-center">
+                    <div st-items-by-page="50" st-pagination="" st-template="views/templates/pagination.custom.html"></div>
+                </td>
+            </tr>
+            </tfoot>
+            </table>
+        </div>
+    </div>

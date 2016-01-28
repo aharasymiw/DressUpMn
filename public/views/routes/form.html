@@ -10,23 +10,23 @@
         <div class="client-info">
             <h4>Client Information</h4>
             <label>First Name
-                <input type="text" placeholder="First Name">
+                <input type="text" ng-model="clientFirstName" placeholder="First Name">
             </label>
             <label>Last Name
-                <input type="text" placeholder="Last Name">
+                <input type="text" ng-model="clientLastName" placeholder="Last Name">
             </label>
             <h4>Client Address</h4>
             <label>Street line 1:
-                <input type="text" placeholder="Street line 1">
+                <input type="text" ng-model="clientStreetL1" placeholder="Street line 1">
             </label>
             <label>Street line 2:
-                <input type="text" placeholder="Street line 2">
+                <input type="text" ng-model="clientStreetL2" placeholder="Street line 2">
             </label>
             <label>City:
-                <input type="text" placeholder="City">
+                <input type="text" ng-model="clientCity" placeholder="City">
             </label>
             <label>State:
-                <select>
+                <select ng-model="clientState">
                     <option value="MN">Minnesota</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -81,38 +81,38 @@
                 </select>
             </label>
             <label>Zip:
-                <input type="text" placeholder="Zip">
+                <input ng-model="clientZip" type="text" placeholder="Zip">
             </label>
             <label>Client Home Phone:
-                <input type="tel">
+                <input ng-model="clientHomePh" type="tel">
             </label>
             <label>Cell Phone:
-                <input type="tel" placeholder="Cell Phone">
+                <input ng-model="clientCellPh" type="tel" placeholder="Cell Phone">
             </label>
             <label>Email:
-                <input type="email" placeholder="Email">
+                <input ng-model="clientEmail" type="email" placeholder="Email">
             </label>
             <p>Alternate Client Contact. How else can we reach you?</p>
             <label>Contact Name
-                <input type="text" placeholder="Contact Name">
+                <input ng-model="altContactName" type="text" placeholder="Contact Name">
             </label>
             <label>Phone Number:
-                <input type="tel"> placeholder="Phone Number">
+                <input ng-model="altContactPh" type="tel">
             </label>
             <label>Relation to Client
-                <input type="text">
+                <input ng-model="altContactRel" type="text">
             </label>
         </div>
         <div class="suiting-info">
             <h4>Client Suiting Information</h4>
             <label>Age:
-                <input type="number">
+                <input ng-model="clientAge" type="number">
             </label>
             <label>Height:
-                <input type="text">
+                <input ng-model="clientHeight" type="text">
             </label>
             <label>Select your top size:
-                <select>
+                <select ng-model="clientTopSize">
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -127,7 +127,7 @@
                 </select>
             </label>
             <label>Select your bottom size:
-                <select>
+                <select ng-model="clientBottomSize">
                     <option value="0">0</option>
                     <option value="2">2</option>
                     <option value="4">4</option>
@@ -158,7 +158,7 @@
             </label>
             <p>Select your shoe size:</p>
             <label>
-                <select>
+                <select ng-model="clientShoeSize">
                     <option value="5.5">5.5</option>
                     <option value="6">6</option>
                     <option value="6.5">6.5</option>
@@ -178,7 +178,7 @@
                 </select>
             </label>
             <br>
-            <label>Does your client have any additional physical, religious or corporate clothing requirements?
+            <label>
             <textarea rows="4" cols="50" name="clothing-restrictions"
                       placeholder="e.g. Unable to wear high-heels, must wear hijab..."></textarea>
             </label>
